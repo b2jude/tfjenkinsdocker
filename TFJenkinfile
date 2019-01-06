@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+    stages {
+
+
+        stage('Terraform-init-plan-apply'){
+            steps {
+                sh """
+                echo "executing deployment of subsystem"
+                cd ${COMPONENT}
+                chmod +x ./deploy.sh
+                ./deploy.sh ${COMMAND} ${APP_NAME} ${COMPONENT} ${REGION} ${ENVIRONMENT} ${STACK_VERSION} ${LIVE_ALB_DNSNAME} ${LIVE_ALB_WEIGHT} \
+                   ${DEV_ALB_WEIGHT} ${DEV_ALB_DNSNAME}
+               """
+            }
+        }
+
+        stage('Cleanup'){
+            steps {
+
+                cleanWs()
+            }
+        }
+
+    }
+}

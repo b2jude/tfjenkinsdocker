@@ -12,7 +12,7 @@ export TF_VAR_stack_version=${STACK_VERSION}
 
      echo "bucket=tf-developer"
      echo "key=${APP_NAME}/${COMPONENT}/${REGION}/${ENVIRONMENT}/${STACK_VERSION}.tfstate"
-     echo "profile=devaccount"
+     echo "profile=development"
      echo " REGION: ${REGION}"
      echo "APP_NAME: ${APP_NAME}"
      echo "COMPONENT: ${COMPONENT}"

@@ -8,6 +8,5 @@ provider "aws" {
 
 provider "aws" {
   region = "${var.region}"
-  profile = "devaccount"
-  alias = "dev.account"
-}
+  profile = "development"
+ }

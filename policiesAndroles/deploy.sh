@@ -28,9 +28,9 @@ export TF_VAR_stack_version=${STACK_VERSION}
      -backend-config="bucket=tf-developer" \
      -backend-config="key=${APP_NAME}/${COMPONENT}/${REGION}/${ENVIRONMENT}/${STACK_VERSION}.tfstate" \
      -backend-config="region=${REGION}" \
-     -backend-config="profile=devaccount" \
+     -backend-config="profile=development" \
      -backend-config="encrypt=true" \
-     -backend-config="kms_key_id=arn:aws:kms:us-east-1:633215889360:key/f3db0336-2252-445c-aa21-d1d1edb75963"
+     -backend-config="arn:aws:kms:us-east-1:151679033716:key/7d5edcb1-7f1a-4cb4-9904-3405416d664b"
     echo "backend created"
 
 

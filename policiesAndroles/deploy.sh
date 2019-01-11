@@ -25,7 +25,7 @@ export TF_VAR_stack_version=${STACK_VERSION}
      which terraform
 
      terraform init \
-     -backend-config="bucket=tf-developer" \
+     -backend-config="bucket=tf-devbucket" \
      -backend-config="key=${APP_NAME}/${COMPONENT}/${REGION}/${ENVIRONMENT}/${STACK_VERSION}.tfstate" \
      -backend-config="region=${REGION}" \
      -backend-config="profile=development" \

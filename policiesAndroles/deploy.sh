@@ -30,7 +30,7 @@ export TF_VAR_stack_version=${STACK_VERSION}
      -backend-config="region=${REGION}" \
      -backend-config="profile=development" \
      -backend-config="encrypt=true" \
-     -backend-config="arn:aws:kms:us-east-1:151679033716:key/7d5edcb1-7f1a-4cb4-9904-3405416d664b"
+     -backend-config="kms_key_id=arn:aws:kms:us-east-1:151679033716:key/7d5edcb1-7f1a-4cb4-9904-3405416d664b"
     echo "backend created"
 
 

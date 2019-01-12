@@ -28,9 +28,10 @@ export TF_VAR_stack_version=${STACK_VERSION}
      -backend-config="bucket=tf-devbucket" \
      -backend-config="key=${APP_NAME}/${COMPONENT}/${REGION}/${ENVIRONMENT}/${STACK_VERSION}.tfstate" \
      -backend-config="region=${REGION}" \
-     -backend-config="profile=development" \
+     -backend-config="role_arn=arn:aws:iam::151679033716:role/Development-tf-jenkins-ec2-role" \
      -backend-config="encrypt=true" \
-     -backend-config="kms_key_id=arn:aws:kms:us-east-1:151679033716:key/7d5edcb1-7f1a-4cb4-9904-3405416d664b"
+     -backend-config="kms_key_id=arn:aws:kms:us-east-1:151679033716:key/7d5edcb1-7f1a-4cb4-9904-3405416d664b" \
+     -backend-config="session_name=tfstate"
     echo "backend created"
 
 
